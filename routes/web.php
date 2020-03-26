@@ -14,3 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index');
+
+Route::get('/muscles', 'MusclesController@index');
+Route::get('/muscles/create', 'MusclesController@create');
+Route::post('/muscles/store', 'MusclesController@store');
+Route::get('/muscles/{muscle}', 'MusclesController@edit');

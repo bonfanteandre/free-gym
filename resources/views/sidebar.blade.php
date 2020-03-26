@@ -17,7 +17,7 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="/">
+        <a class="nav-link" href="/muscles">
             <i class="fas fa-fw fa-walking"></i>
             <span>Músculos</span>
         </a>
