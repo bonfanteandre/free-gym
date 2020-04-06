@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreMuscle;
 use App\Muscle;
-use Illuminate\Http\Request;
 
 class MusclesController extends Controller
 {
