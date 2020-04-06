@@ -71,7 +71,7 @@
                                     @method('DELETE')
                                     @csrf
                                     <button type="submit" class="btn btn-danger">
-                                        <i class="fa fa-trash"></i> Desvincular
+                                        <i class="fa fa-times"></i> Desvincular
                                     </button>
                                 </form>
                             </td>
