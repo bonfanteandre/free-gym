@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Exercise;
 use App\Http\Requests\StoreExercise;
+use App\Muscle;
 use Illuminate\Http\Request;
 
 class ExercisesController extends Controller
@@ -58,9 +59,15 @@ class ExercisesController extends Controller
      * @param  \App\Exercise  $exercise
      * @return \Illuminate\Http\Response
      */
-    public function edit(Exercise $exercise)
+    public function edit(Request $request, Exercise $exercise)
     {
-        return view('exercises.edit', compact('exercise'));
+        $muscles = Muscle::query()
+            ->orderBy('name', 'ASC')
+            ->get();
+
+        $success = $request->session()->get('success');
+
+        return view('exercises.edit', compact('exercise', 'muscles', 'success'));
     }
 
     /**

@@ -26,3 +26,6 @@ Route::get('/exercises/create', 'ExercisesController@create');
 Route::post('/exercises/store', 'ExercisesController@store');
 Route::get('/exercises/{exercise}', 'ExercisesController@edit');
 Route::patch('/exercises/{exercise}', 'ExercisesController@update');
+
+Route::post('/exercise/{exercise}/muscle', 'ExercisesMusclesController@store');
+Route::delete('/exercise/{exercise}/muscle/{muscle}', 'ExercisesMusclesController@destroy');
