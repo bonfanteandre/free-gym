@@ -24,7 +24,7 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="/">
+        <a class="nav-link" href="/exercises">
             <i class="fas fa-fw fa-dumbbell"></i>
             <span>Exerícios</span>
         </a>

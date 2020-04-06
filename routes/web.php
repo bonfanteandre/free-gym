@@ -20,3 +20,9 @@ Route::get('/muscles/create', 'MusclesController@create');
 Route::post('/muscles/store', 'MusclesController@store');
 Route::get('/muscles/{muscle}', 'MusclesController@edit');
 Route::patch('/muscles/{muscle}', 'MusclesController@update');
+
+Route::get('/exercises', 'ExercisesController@index');
+Route::get('/exercises/create', 'ExercisesController@create');
+Route::post('/exercises/store', 'ExercisesController@store');
+Route::get('/exercises/{exercise}', 'ExercisesController@edit');
+Route::patch('/exercises/{exercise}', 'ExercisesController@update');
