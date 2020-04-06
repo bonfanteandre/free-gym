@@ -14,7 +14,12 @@ class ExercisesMusclesController extends Controller
         $request->validated();
 
         $muscle = Muscle::findOrFail($request->muscle_id);
-        $exercise->addMuscle($muscle);
+        $muscledAdded = $exercise->addMuscle($muscle);
+
+        if ($muscledAdded === false) {
+            return redirect("/exercises/{$exercise->id}")
+                ->withErrors("O músculo {$muscle->name} já está vinculado ao exercício!");
+        }
 
         $request->session()->flash('success', 'Músculo vinculado ao exercício com sucesso!');
 

@@ -13,21 +13,27 @@ class Exercise extends Model
         return $this->belongsToMany(Muscle::class, 'exercise_muscle');
     }
 
-    public function addMuscle(Muscle $muscle)
+    public function addMuscle(Muscle $muscle): bool
     {
         if (!$this->containsMuscle($muscle)) {
             $this->muscles()->attach($muscle);
+            return true;
         }
+
+        return false;
     }
 
-    public function removeMuscle(Muscle $muscle)
+    public function removeMuscle(Muscle $muscle): bool
     {
         if ($this->containsMuscle($muscle)) {
             $this->muscles()->detach($muscle);
-        }     
+            return true;
+        }
+
+        return false;
     }
 
-    public function containsMuscle(Muscle $muscle)
+    public function containsMuscle(Muscle $muscle): bool
     {
         return $this->muscles()->get()->contains($muscle);
     }
