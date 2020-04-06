@@ -21,7 +21,7 @@
                     <thead>
                     <tr>
                         <th>Nome</th>
-                        <th style="width: 10%" class="text-center"></th>
+                        <th style="width: 15%" class="text-center"></th>
                     </tr>
                     </thead>
                     <tbody>
