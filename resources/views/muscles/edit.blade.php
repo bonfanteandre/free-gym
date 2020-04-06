@@ -10,15 +10,16 @@
 
     @include('errors')
 
-    <form method="POST" action="/muscles/store">
+    <form method="POST" action="/muscles/{{ $muscle->id }}">
+        @method('PATCH')
         @csrf
 
         <div class="form-group">
             <label for="nome"><strong>Nome *</strong></label>
-            <input type="text" name="name" class="form-control" id="nome" placeholder="Bíceps, trícpes, dorsal, ...">
+            <input type="text" name="name" class="form-control" id="nome" value="{{ $muscle->name }}" placeholder="Bíceps, trícpes, dorsal, ...">
         </div>
 
-        <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Salvar</button>
+        <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Atualizar</button>
 
     </form>
 

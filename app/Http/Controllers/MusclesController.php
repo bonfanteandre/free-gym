@@ -35,4 +35,14 @@ class MusclesController extends Controller
     {
         return view('muscles.edit', compact('muscle'));
     }
+
+    public function update(Muscle $muscle, StoreMuscle $request)
+    {
+        $request->validated();
+
+        $muscle->name = $request->name;
+        $muscle->save();
+
+        return redirect('/muscles');
+    }
 }
