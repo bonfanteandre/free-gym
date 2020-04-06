@@ -9,21 +9,21 @@
 
     <hr class="sidebar-divider my-0">
 
-    <li class="nav-item">
+    <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
         <a class="nav-link" href="/">
             <i class="fas fa-fw fa-home"></i>
             <span>Home</span>
         </a>
     </li>
 
-    <li class="nav-item">
+    <li class="nav-item {{ Request::is('muscles') ? 'active' : '' }}">
         <a class="nav-link" href="/muscles">
             <i class="fas fa-fw fa-walking"></i>
             <span>Músculos</span>
         </a>
     </li>
 
-    <li class="nav-item">
+    <li class="nav-item {{ Request::is('exercises') ? 'active' : '' }}">
         <a class="nav-link" href="/exercises">
             <i class="fas fa-fw fa-dumbbell"></i>
             <span>Exerícios</span>
