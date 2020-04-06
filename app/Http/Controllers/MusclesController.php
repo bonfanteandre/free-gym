@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreMuscle;
 use App\Muscle;
 use Illuminate\Http\Request;
 
@@ -19,11 +20,13 @@ class MusclesController extends Controller
         return view ('muscles.create');
     }
 
-    public function store()
+    public function store(StoreMuscle $request)
     {
-        $this->validateMuscle();
+        $request->validated();
 
-        $muscle = Muscle::create(request()->only(['name']));
+        $muscle = new Muscle;
+        $muscle->name = $request->name;
+        $muscle->save();
 
         return redirect('/muscles');
     }
@@ -31,12 +34,5 @@ class MusclesController extends Controller
     public function edit(Muscle $muscle)
     {
         return view('muscles.edit', compact('muscle'));
-    }
-
-    private function validateMuscle()
-    {
-        return request()->validate([
-            'name' => ['required']
-        ]);
     }
 }
