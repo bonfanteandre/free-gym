@@ -9,6 +9,8 @@
 
     <p><a href="/muscles/create" class="btn btn-success"><i class="fa fa-plus"></i> Adicionar</a></p>
 
+    @include('success')
+
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Músculos cadastrados</h6>

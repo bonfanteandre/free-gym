@@ -4,14 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreMuscle;
 use App\Muscle;
+use Illuminate\Http\Request;
 
 class MusclesController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $muscles = Muscle::all();
 
-        return view('muscles.index', compact('muscles'));
+        $success = $request->session()->get('success');
+
+        return view('muscles.index', compact('muscles', 'success'));
     }
 
     public function create()
@@ -27,6 +30,8 @@ class MusclesController extends Controller
         $muscle->name = $request->name;
         $muscle->save();
 
+        $request->session()->flash('success', 'Músculo adicionado com sucesso!');
+
         return redirect('/muscles');
     }
 
@@ -41,6 +46,8 @@ class MusclesController extends Controller
 
         $muscle->name = $request->name;
         $muscle->save();
+
+        $request->session()->flash('success', 'Músculo atualizado com sucesso!');
 
         return redirect('/muscles');
     }
