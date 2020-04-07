@@ -94,6 +94,20 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="plan"><strong>Plano *</strong></label>
+                    <select name="plan_id" id="plan" class="form-control">
+                        <option value="" selected disabled>Selecione um plano</option>
+                        @foreach($plans as $plan)
+                            <option value="{{ $plan->id }}" @if($plan->id === $client->plan->id) selected @endif>{{ $plan->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+        </div>
+
         <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Salvar</button>
 
     </form>

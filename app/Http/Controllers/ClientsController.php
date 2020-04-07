@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Client;
 use App\Http\Requests\StoreClient;
 use App\Http\Requests\UpdateClient;
+use App\Plan;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,11 @@ class ClientsController extends Controller
      */
     public function create()
     {
-        return view('clients.create');
+        $plans = Plan::query()
+            ->orderBy('name')
+            ->get();
+
+        return view('clients.create', compact('plans'));
     }
 
     /**
@@ -57,6 +62,7 @@ class ClientsController extends Controller
         $client->zipcode = $request->zipcode;
         $client->city = $request->city;
         $client->state = $request->state;
+        $client->plan_id = $request->plan_id;
         $client->save();
 
         $request->session()->flash('success', "Cliente {$client->name} cadastrado com sucesso!");
@@ -72,7 +78,11 @@ class ClientsController extends Controller
      */
     public function edit(Client $client)
     {
-        return view('clients.edit', compact('client'));
+        $plans = Plan::query()
+            ->orderBy('name')
+            ->get();
+
+        return view('clients.edit', compact('client', 'plans'));
     }
 
     /**
@@ -96,6 +106,7 @@ class ClientsController extends Controller
         $client->zipcode = $request->zipcode;
         $client->city = $request->city;
         $client->state = $request->state;
+        $client->plan_id = $request->plan_id;
         $client->save();
 
         $request->session()->flash('success', "Cliente {$client->name} atualizado com sucesso!");

@@ -20,6 +20,11 @@ class Client extends Model
         'zipcode'
     ];
 
+    public function plan()
+    {
+        return $this->belongsTo(Plan::class);
+    }
+
     public function setPhoneAttribute($value)
     {   
         $this->attributes['phone'] = preg_replace('/\D/', '', $value);

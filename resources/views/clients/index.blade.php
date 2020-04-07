@@ -24,6 +24,7 @@
                         <th>Telefone</th>
                         <th>E-mail</th>
                         <th>CPF</th>
+                        <th>Plano</th>
                         <th style="width: 15%" class="text-center"></th>
                     </tr>
                     </thead>
@@ -34,6 +35,7 @@
                             <td>{{ $client->phone }}</td>
                             <td>{{ $client->email }}</td>
                             <td>{{ $client->document }}</td>
+                            <td>{{ $client->plan->name }}</td>
                             <td class="text-center">
                                 <a href="/clients/{{ $client->id }}" class="btn btn-info"><i class="fas fa-edit"></i> Editar</a>
                             </td>

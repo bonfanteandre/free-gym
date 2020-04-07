@@ -33,7 +33,8 @@ class UpdateClient extends FormRequest
             'address' => 'required',
             'city' => 'required',
             'state' => 'required',
-            'zipcode' => 'required'
+            'zipcode' => 'required',
+            'plan_id' => 'required'
         ];
     }
 
