@@ -36,6 +36,7 @@
     <script src="{{ asset('js/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap/js/bootstrap.bundle.js') }}"></script>
     <script src="{{ asset('js/jquery-easing/jquery.easing.min.js') }}"></script>
-    <script src="{{ asset('js/sb-admin/sb-admin-2.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-mask/jquery.mask.min.js') }}"></script>
+    <script src="{{ asset('js/client-form-masks.js') }}"></script>
 </body>
 </html>

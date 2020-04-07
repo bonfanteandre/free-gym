@@ -37,8 +37,8 @@
         </a>
     </li>
 
-    <li class="nav-item">
-        <a class="nav-link" href="/">
+    <li class="nav-item {{ Request::is('clients') ? 'active' : '' }}">
+        <a class="nav-link" href="/clients">
             <i class="fas fa-fw fa-users"></i>
             <span>Clientes</span>
         </a>

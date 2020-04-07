@@ -32,3 +32,9 @@ Route::patch('/exercises/{exercise}', 'ExercisesController@update');
 
 Route::post('/exercise/{exercise}/muscle', 'ExercisesMusclesController@store');
 Route::delete('/exercise/{exercise}/muscle/{muscle}', 'ExercisesMusclesController@destroy');
+
+Route::get('/clients', 'ClientsController@index');
+Route::get('/clients/create', 'ClientsController@create');
+Route::post('/clients', 'ClientsController@store');
+Route::get('/clients/{client}', 'ClientsController@edit');
+Route::patch('/clients/{client}', 'ClientsController@update');
