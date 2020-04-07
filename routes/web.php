@@ -38,3 +38,9 @@ Route::get('/clients/create', 'ClientsController@create');
 Route::post('/clients', 'ClientsController@store');
 Route::get('/clients/{client}', 'ClientsController@edit');
 Route::patch('/clients/{client}', 'ClientsController@update');
+
+Route::get('/plans', 'PlansController@index');
+Route::get('/plans/create', 'PlansController@create');
+Route::post('/plans', 'PlansController@store');
+Route::get('/plans/{plan}', 'PlansController@edit');
+Route::patch('/plans/{plan}', 'PlansController@update');

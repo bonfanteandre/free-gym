@@ -31,7 +31,7 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="/">
+        <a class="nav-link" href="/plans">
             <i class="fas fa-fw fa-dollar-sign"></i>
             <span>Planos</span>
         </a>
