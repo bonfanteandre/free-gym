@@ -10,7 +10,7 @@
 
     @include('errors')
 
-    <form method="POST" action="/muscles/store">
+    <form method="POST" action="/muscles">
         @csrf
 
         <div class="form-group">

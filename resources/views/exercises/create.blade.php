@@ -10,7 +10,7 @@
 
     @include('errors')
 
-    <form method="POST" action="/exercises/store">
+    <form method="POST" action="/exercises">
         @csrf
 
         <div class="form-group">
