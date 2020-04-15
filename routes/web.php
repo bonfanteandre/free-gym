@@ -44,3 +44,9 @@ Route::get('/plans/create', 'PlansController@create');
 Route::post('/plans', 'PlansController@store');
 Route::get('/plans/{plan}', 'PlansController@edit');
 Route::patch('/plans/{plan}', 'PlansController@update');
+
+Route::get('/records', 'RecordsController@index');
+Route::get('/records/create', 'RecordsController@create');
+Route::post('/records', 'RecordsController@store');
+Route::get('/records/{record}', 'RecordsController@edit');
+Route::patch('/records/{record}', 'RecordsController@update');

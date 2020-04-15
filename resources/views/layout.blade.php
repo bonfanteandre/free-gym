@@ -38,5 +38,6 @@
     <script src="{{ asset('js/jquery-easing/jquery.easing.min.js') }}"></script>
     <script src="{{ asset('js/jquery-mask/jquery.mask.min.js') }}"></script>
     <script src="{{ asset('js/client-form-masks.js') }}"></script>
+    <script src="{{ asset('js/record-form-masks.js') }}"></script>
 </body>
 </html>

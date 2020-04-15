@@ -45,7 +45,7 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="/">
+        <a class="nav-link" href="/records">
             <i class="fas fa-fw fa-list-alt"></i>
             <span>Fichas de treino</span>
         </a>
