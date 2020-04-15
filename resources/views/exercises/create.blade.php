@@ -8,6 +8,7 @@
     <p class="mb-4">Preencha o formulário para criar um novo exercício.</p>
     <p><small>Campos marcados com * são obrigatórios.</small></p>
 
+    @include('success')
     @include('errors')
 
     <form method="POST" action="/exercises">

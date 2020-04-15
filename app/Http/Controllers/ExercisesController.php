@@ -55,7 +55,7 @@ class ExercisesController extends Controller
 
         $request->session()->flash('success', 'Exercício cadastrado com sucesso!');
 
-        return redirect('/exercises');
+        return redirect("/exercises/{$exercise->id}");
     }
 
     /**
