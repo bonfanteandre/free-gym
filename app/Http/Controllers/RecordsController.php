@@ -20,13 +20,15 @@ class RecordsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $records = Record::query()
             ->orderBy('id', 'desc')
             ->get();
 
-        return view('records.index', compact('records'));
+        $success = $request->session()->get('success');
+
+        return view('records.index', compact('records', 'success'));
 ;    }
 
     /**
